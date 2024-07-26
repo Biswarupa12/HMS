@@ -1,0 +1,13 @@
+.nav-item{
+    list-style-type: none;
+    
+}
+.container{
+    background-color:skyblue;
+    height: 111px;
+}
+body{
+    background-image: url("https://images.opencollective.com/ospic/be9b57c/background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}

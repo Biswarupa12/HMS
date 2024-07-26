@@ -1,0 +1,11 @@
+.nav-item{
+    float: right;
+    list-style: none;
+}
+a{
+    padding-left:15px;
+}
+.btn{
+    background-color:blueviolet;
+    color: white;
+}

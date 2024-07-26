@@ -1,0 +1,46 @@
+
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+<nav style="background-color:lightseagreen; height: 70px; margin:auto" class="navbar navbar-expand-lg bg-dark">
+    <a style="color:black;padding-left: 550px;font-size: 25px; "class="navbar-brand" href="#">Hospital Management System</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+            <a style="color:white"class="nav-link active" aria-current="page" href="javascript:void(0)"routerLink="/create-appointment"><u>Add Appointment &nbsp;</u>&nbsp;&nbsp;</a>
+          <a style="color:white"class="nav-link active" aria-current="page" href="javascript:void(0)"routerLink="/admin"><u>Back</u></a>
+        </li>
+        </ul>
+        </div>
+       </nav>
+       <div class="container">
+          <hr><h2 style="text-align: center;margin-top:20px;">Appointments</h2>
+<a style="color: rgb(86, 86,86);font-size: x-large;"><marquee behavior="scroll" direction="left">Welcome to Appointment Dashboard.Please find the patient list below!!.Click Appointments to view and update Appointments,Click Add Appointment to add new Appointment</marquee></a>
+  <hr><a style="color: rgb(86, 86, 86); font-size: xx-large;">Current Patient List in the Queue</a>   
+<div class="tableFixHead">
+</div><br>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID&nbsp;&nbsp;</th>
+           <th>Name&nbsp;&nbsp;</th> 
+           <th>Age&nbsp;&nbsp;</th>
+           <th>Symtomps&nbsp;&nbsp;</th>
+           <th>Number&nbsp;&nbsp;</th>
+           <th>Action&nbsp;&nbsp;</th>
+        </tr>
+    </thead>
+    <tbody><tr *ngFor="let appointment of appointments ">
+<td>{{appointment.id}}</td>
+<td>{{appointment.name}}</td>
+<td>{{appointment.age}}</td>
+<td>{{appointment.symptoms}}</td>
+<td>{{appointment.number}}</td>
+<td><button (click)="delete(appointment.id)"class="btn btn-danger">Delete</button></td>
+    </tr></tbody>
+</table>
+</div>
+</body>
